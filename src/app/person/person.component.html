@@ -1,8 +1,14 @@
 <p>
     <u>PERSON</u> <br>
-    name: "name" <br>
-    added_on: date <br>
-    instructor: true <br>
-    <button id="show">SHOW MORE</button> <br>
-    <button id="delete">DELETE</button>
+    name: <span [textContent]="person.name"></span> <br>
+    added_on: {{ person.added_on }} <br>
+    instructor: {{ person.instructor }} <br>
+    <span id ="butt" class="d-grid gap-2 col-12">
+        <button id="show" class="btn btn-outline-primary">SHOW MORE</button> 
+        <button 
+            id="delete" 
+            class="btn btn-outline-danger"
+            (click)="onDelete($event,person.name)"    
+        >DELETE</button>
+    </span>
 </p>
