@@ -1,8 +1,13 @@
-<p>
+<p
+    appColors
+    [ngClass]="{ 'instructor-style':person.instructor }"
+>
     <u>PERSON</u> <br>
     name: <span [textContent]="person.name"></span> <br>
-    added_on: {{ person.added_on }} <br>
-    instructor: {{ person.instructor }} <br>
+    added_on: {{ person.added_on | date:'MMM dd, yyyy' | uppercase }} <br>
+    instructor: <span *ngIf="person.instructor; then ins else notins"></span> <br>
+    <ng-template #ins>&check;</ng-template>
+    <ng-template #notins>&#10005;</ng-template>
     <span id ="butt" class="d-grid gap-2 col-12">
         <button id="show" class="btn btn-outline-primary">SHOW MORE</button> 
         <button 

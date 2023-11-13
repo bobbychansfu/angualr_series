@@ -22,7 +22,7 @@ export class PeopleListComponent {
       {
         name: "sarah",
         age: 42,
-        instructor: true,
+        instructor: false,
         added_on: new Date().getTime()
       },
       {
@@ -34,7 +34,7 @@ export class PeopleListComponent {
       {
         name: "jane",
         age: 42,
-        instructor: true,
+        instructor: false,
         added_on: new Date().getTime()
       },
       {
