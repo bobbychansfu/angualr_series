@@ -7,16 +7,24 @@ import { PeopleListComponent } from './people-list/people-list.component';
 import { ColorsDirective } from './colors.directive';
 import { CountPeoplePipe } from './count-people.pipe';
 
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { SearchPipe } from './search.pipe';
+import { PersonAddFormComponent } from './person-add-form/person-add-form.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     PersonComponent,
     PeopleListComponent,
     ColorsDirective,
-    CountPeoplePipe
+    CountPeoplePipe,
+    SearchPipe,
+    PersonAddFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
